@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Mail, Linkedin, Copy, Check } from 'lucide-react';
+import { Github, Mail, Copy, Check } from 'lucide-react';
 import { personalInfo } from '../config/personal';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -46,12 +46,6 @@ const Contact = () => {
       value: personalInfo.github || 'github.com/jakexudm2000',
       href: personalInfo.github || 'https://github.com/jakexudm2000',
     },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      value: personalInfo.linkedin || 'LinkedIn Profile',
-      href: personalInfo.linkedin || '#',
-    },
   ];
 
   return (
@@ -61,7 +55,7 @@ const Contact = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="max-w-3xl mx-auto text-center"
+        className="max-w-2xl mx-auto text-center"
       >
         <motion.h2 variants={itemVariants} className="section-title">
           {t.contact.title}
@@ -71,7 +65,7 @@ const Contact = () => {
           {t.contact.description}
         </motion.p>
 
-        <motion.div variants={itemVariants} className="grid md:grid-cols-3 gap-6">
+        <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-6">
           {contactMethods.map((method, index) => (
             <div
               key={index}

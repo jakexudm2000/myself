@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Moon, Sun, Globe } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../config/i18n';
 
 const Navbar = () => {
