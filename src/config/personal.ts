@@ -115,8 +115,8 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
       ]
     },
     {
-      company: 'Tencent Computer Systems Co., Ltd.',
-      company_zh: '腾讯计算机系统有限公司',
+      company: 'Tencent Technology Co., Ltd.',
+      company_zh: '腾讯科技有限公司',
       position: 'Operations Intern',
       position_zh: '运维实习生',
       period: '2020.06 - 2020.08',
