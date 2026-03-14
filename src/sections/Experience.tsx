@@ -32,7 +32,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="section-container bg-gray-50 dark:bg-gray-900/50">
+    <section id="experience" className="section-container">
       <motion.div
         initial="hidden"
         whileInView="visible"
