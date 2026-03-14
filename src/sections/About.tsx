@@ -67,9 +67,11 @@ const About = () => {
 
         <motion.div variants={itemVariants}>
           <div className="rounded-xl overflow-hidden shadow-xl">
-            <div className="aspect-square bg-gradient-to-br from-primary-light/20 to-primary-dark/20 dark:from-primary-light/10 dark:to-primary-dark/10 flex items-center justify-center">
-              <span className="text-6xl">👨‍💻</span>
-            </div>
+            <img 
+              src="/myself/profile.jpg" 
+              alt="Jake Xu" 
+              className="aspect-square object-cover w-full"
+            />
           </div>
 
           <div className="mt-8">
