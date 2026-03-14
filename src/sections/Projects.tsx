@@ -1,46 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github as GithubIcon, X } from 'lucide-react';
-import { personalInfo } from '../config/personal';
+import { personalInfo, getLocalizedField } from '../config/personal';
 import { useLanguage } from '../context/LanguageContext';
 
-const placeholderProjects = [
-  {
-    title: 'Git Kernel Optimization',
-    description: 'Performance optimization for Git kernel, supporting 500k+ references with sub-second filtering latency.',
-    technologies: ['C', 'Golang', 'Git', 'Distributed Systems'],
-    image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop',
-    githubUrl: '',
-    demoUrl: '',
-  },
-  {
-    title: 'Distributed Git Storage System',
-    description: 'Highly available distributed Git storage system based on Raft consensus algorithm, removing NFS dependency.',
-    technologies: ['Raft', 'Golang', 'Distributed Storage', 'High Availability'],
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
-    githubUrl: '',
-    demoUrl: '',
-  },
-  {
-    title: 'GitCode Platform',
-    description: 'Collaborated with CSDN to build GitCode code hosting platform, supporting large-scale repository migration and optimization.',
-    technologies: ['Git', 'Platform Architecture', 'Performance Optimization'],
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
-    githubUrl: '',
-    demoUrl: '',
-  },
-  {
-    title: 'Host Cluster Management System',
-    description: 'Centralized monitoring and management system for large game server clusters, improving operational efficiency.',
-    technologies: ['Python', 'Django', 'Vue.js', 'DevOps'],
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop',
-    githubUrl: '',
-    demoUrl: '',
-  },
-];
-
 const Projects = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const containerVariants = {
@@ -62,7 +27,7 @@ const Projects = () => {
     },
   };
 
-  const projects = personalInfo.projects.length > 0 ? personalInfo.projects : placeholderProjects;
+  const projects = personalInfo.projects;
 
   return (
     <section id="projects" className="section-container">
@@ -86,14 +51,14 @@ const Projects = () => {
               <div className="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-100 dark:bg-gray-800">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={getLocalizedField(project.title, language)}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <h3 className="text-xl font-bold mb-2">{getLocalizedField(project.title, language)}</h3>
               <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4 line-clamp-2">
-                {project.description}
+                {getLocalizedField(project.description, language)}
               </p>
               
               <div className="flex flex-wrap gap-2 mb-4">
@@ -166,16 +131,18 @@ const Projects = () => {
                 <div className="aspect-video w-full">
                   <img
                     src={projects[selectedProject].image}
-                    alt={projects[selectedProject].title}
+                    alt={getLocalizedField(projects[selectedProject].title, language)}
                     className="w-full h-full object-cover rounded-t-xl"
                   />
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-4">{projects[selectedProject].title}</h3>
+                  <h3 className="text-2xl font-bold mb-4">
+                    {getLocalizedField(projects[selectedProject].title, language)}
+                  </h3>
                   
                   <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6">
-                    {projects[selectedProject].description}
+                    {getLocalizedField(projects[selectedProject].description, language)}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">

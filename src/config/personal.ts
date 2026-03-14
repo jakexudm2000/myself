@@ -165,7 +165,72 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
       { name: 'High Availability Architecture', level: 90 }
     ]
   },
-  projects: []
+  projects: [
+    {
+      title: {
+        'en': 'Git Kernel Optimization',
+        'zh-CN': 'Git内核优化',
+        'zh-TW': 'Git內核優化',
+      },
+      description: {
+        'en': 'Performance optimization for Git kernel, supporting 500k+ references with sub-second filtering latency.',
+        'zh-CN': 'Git内核性能优化，支持50万+引用，过滤延迟在亚秒级。',
+        'zh-TW': 'Git內核效能優化，支援50萬+引用，過濾延遲在亞秒級。',
+      },
+      technologies: ['Git Kernel', 'C', 'Golang', 'Distributed Systems'],
+      image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop',
+      githubUrl: '',
+      demoUrl: '',
+    },
+    {
+      title: {
+        'en': 'Distributed Git Storage System',
+        'zh-CN': '分布式Git存储系统',
+        'zh-TW': '分散式Git儲存系統',
+      },
+      description: {
+        'en': 'Highly available distributed Git storage system based on Raft consensus algorithm, removing NFS dependency.',
+        'zh-CN': '基于Raft共识算法的高可用分布式Git存储系统，消除NFS依赖。',
+        'zh-TW': '基於Raft共識演算法的高可用分散式Git儲存系統，消除NFS依賴。',
+      },
+      technologies: ['Raft', 'Golang', 'Distributed Storage', 'High Availability'],
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+      githubUrl: '',
+      demoUrl: '',
+    },
+    {
+      title: {
+        'en': 'GitCode Platform',
+        'zh-CN': 'GitCode代码托管平台',
+        'zh-TW': 'GitCode程式碼托管平台',
+      },
+      description: {
+        'en': 'Collaborated with CSDN to build GitCode code hosting platform, supporting large-scale repository migration and optimization.',
+        'zh-CN': '与CSDN合作搭建GitCode代码托管平台，支持大规模仓库迁移与优化。',
+        'zh-TW': '與CSDN合作搭建GitCode程式碼托管平台，支援大規模倉庫遷移與優化。',
+      },
+      technologies: ['Git', 'Platform Architecture', 'Performance Optimization'],
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
+      githubUrl: '',
+      demoUrl: '',
+    },
+    {
+      title: {
+        'en': 'Host Cluster Management System',
+        'zh-CN': '主机集群管理系统',
+        'zh-TW': '主機叢集管理系統',
+      },
+      description: {
+        'en': 'Centralized monitoring and management system for large game server clusters, improving operational efficiency.',
+        'zh-CN': '大型游戏服务器集群集中监控与管理系统，提升运维效率。',
+        'zh-TW': '大型遊戲伺服器叢集集中監控與管理系統，提升運維效率。',
+      },
+      technologies: ['Python', 'Django', 'Vue.js', 'DevOps'],
+      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop',
+      githubUrl: '',
+      demoUrl: '',
+    },
+  ]
 };
 
 export const getLocalizedField = (obj: Record<Language, string> | string, lang: Language): string => {
