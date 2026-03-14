@@ -168,14 +168,14 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
   projects: [
     {
       title: {
-        'en': 'Git Kernel Optimization',
-        'zh-CN': 'Git内核优化',
-        'zh-TW': 'Git內核優化',
+        'en': 'CodeHub',
+        'zh-CN': 'CodeHub',
+        'zh-TW': 'CodeHub',
       },
       description: {
-        'en': 'Performance optimization for Git kernel, supporting 500k+ references with sub-second filtering latency.',
-        'zh-CN': 'Git内核性能优化，支持50万+引用，过滤延迟在亚秒级。',
-        'zh-TW': 'Git內核效能優化，支援50萬+引用，過濾延遲在亞秒級。',
+        'en': 'Huawei\'s full-stack self-developed code hosting platform, focusing on serving the internal R&D tool environment.',
+        'zh-CN': '华为全栈自研的代码托管平台，专注服务于内部研发工具环境。',
+        'zh-TW': '華為全棧自研的程式碼托管平台，專注服務於內部研發工具環境。',
       },
       technologies: ['Git Kernel', 'C', 'Golang', 'Distributed Systems'],
       image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop',
@@ -184,51 +184,39 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
     },
     {
       title: {
-        'en': 'Distributed Git Storage System',
-        'zh-CN': '分布式Git存储系统',
-        'zh-TW': '分散式Git儲存系統',
+        'en': 'CodeArtsRepo',
+        'zh-CN': 'CodeArtsRepo',
+        'zh-TW': 'CodeArtsRepo',
       },
       description: {
-        'en': 'Highly available distributed Git storage system based on Raft consensus algorithm, removing NFS dependency.',
-        'zh-CN': '基于Raft共识算法的高可用分布式Git存储系统，消除NFS依赖。',
-        'zh-TW': '基於Raft共識演算法的高可用分散式Git儲存系統，消除NFS依賴。',
+        'en': 'Huawei Public Cloud\'s full-stack self-developed code hosting platform.',
+        'zh-CN': '华为公有云全栈自研的代码托管平台。',
+        'zh-TW': '華為公有雲全棧自研的程式碼托管平台。',
       },
       technologies: ['Raft', 'Golang', 'Distributed Storage', 'High Availability'],
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
       githubUrl: '',
-      demoUrl: '',
+      demoUrl: {
+        'en': 'https://support.huaweicloud.com/intl/en-us/codeartsrepo/index.html',
+        'zh-CN': 'https://support.huaweicloud.com/intl/zh-cn/codeartsrepo/index.html',
+        'zh-TW': 'https://support.huaweicloud.com/intl/zh-cn/codeartsrepo/index.html',
+      },
     },
     {
       title: {
-        'en': 'GitCode Platform',
-        'zh-CN': 'GitCode代码托管平台',
-        'zh-TW': 'GitCode程式碼托管平台',
+        'en': 'GitCode',
+        'zh-CN': 'GitCode',
+        'zh-TW': 'GitCode',
       },
       description: {
-        'en': 'Collaborated with CSDN to build GitCode code hosting platform, supporting large-scale repository migration and optimization.',
-        'zh-CN': '与CSDN合作搭建GitCode代码托管平台，支持大规模仓库迁移与优化。',
-        'zh-TW': '與CSDN合作搭建GitCode程式碼托管平台，支援大規模倉庫遷移與優化。',
+        'en': 'Open-source code hosting platform built in cooperation with CSDN, with Huawei providing technical base support. Website: gitcode.com',
+        'zh-CN': '与CSDN合作，华为提供技术底座支持，搭建的开源代码托管平台，网址为gitcode.com。',
+        'zh-TW': '與CSDN合作，華為提供技術底座支持，搭建的開源程式碼托管平台，網址為gitcode.com。',
       },
       technologies: ['Git', 'Platform Architecture', 'Performance Optimization'],
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
       githubUrl: '',
-      demoUrl: '',
-    },
-    {
-      title: {
-        'en': 'Host Cluster Management System',
-        'zh-CN': '主机集群管理系统',
-        'zh-TW': '主機叢集管理系統',
-      },
-      description: {
-        'en': 'Centralized monitoring and management system for large game server clusters, improving operational efficiency.',
-        'zh-CN': '大型游戏服务器集群集中监控与管理系统，提升运维效率。',
-        'zh-TW': '大型遊戲伺服器叢集集中監控與管理系統，提升運維效率。',
-      },
-      technologies: ['Python', 'Django', 'Vue.js', 'DevOps'],
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop',
-      githubUrl: '',
-      demoUrl: '',
+      demoUrl: 'https://gitcode.com',
     },
   ]
 };

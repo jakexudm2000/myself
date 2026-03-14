@@ -87,7 +87,7 @@ const Projects = () => {
                 )}
                 {project.demoUrl && (
                   <a
-                    href={project.demoUrl}
+                    href={getLocalizedField(project.demoUrl, language)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
@@ -170,7 +170,7 @@ const Projects = () => {
                     )}
                     {projects[selectedProject].demoUrl && (
                       <a
-                        href={projects[selectedProject].demoUrl}
+                        href={getLocalizedField(projects[selectedProject].demoUrl, language)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-primary flex items-center gap-2"
