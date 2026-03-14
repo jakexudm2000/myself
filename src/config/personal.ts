@@ -145,10 +145,9 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
     programmingLanguages: [
       { name: 'Golang', level: 95 },
       { name: 'Shell', level: 90 },
-      { name: 'C', level: 85 },
-      { name: 'Python', level: 80 },
-      { name: 'Java', level: 70 },
-      { name: 'C++', level: 70 },
+      { name: 'C/C++', level: 50 },
+      { name: 'Python', level: 75 },
+      { name: 'Java', level: 50 },
       { name: 'Lua', level: 65 }
     ],
     databases: [
@@ -163,7 +162,7 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
       { name: 'gRPC', level: 85 },
       { name: 'HTTPS', level: 85 },
       { name: 'NFS v3', level: 80 },
-      { name: 'S3', level: 80 },
+      { name: 'S3', level: 75 },
       { name: 'High Availability Architecture', level: 90 }
     ]
   },
