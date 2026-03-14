@@ -63,8 +63,8 @@ const Experience = () => {
                       <div className="w-10 h-10 rounded-lg bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm overflow-hidden">
                         <img 
                           src={exp.company === 'Huawei Technologies Co., Ltd.' 
-                            ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Huawei_Logo.svg/2048px-Huawei_Logo.svg.png'
-                            : 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Tencent_Logo.svg/2048px-Tencent_Logo.svg.png'
+                            ? 'https://www.huawei.com/cn/assets/images/logo.png'
+                            : 'https://inews.gtimg.com/newsapp_bt/0/14991476743/641'
                           } 
                           alt={exp.company} 
                           className="w-8 h-8 object-contain"
