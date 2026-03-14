@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Moon, Sun, Github, Mail, Linkedin } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 
 const Navbar = () => {

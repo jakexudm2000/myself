@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp, Briefcase } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { personalInfo } from '../config/personal';
 
 const Experience = () => {
