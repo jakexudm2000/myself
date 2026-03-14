@@ -50,6 +50,10 @@ const About = () => {
               <span className="text-text-secondary-light dark:text-text-secondary-dark">{getLocalizedField(personalInfo.location, language)}</span>
             </div>
             <div className="flex items-center">
+              <span className="font-medium w-24">{t.about.birthday}:</span>
+              <span className="text-text-secondary-light dark:text-text-secondary-dark">{language === 'en' ? personalInfo.birthday : personalInfo.birthday_zh}</span>
+            </div>
+            <div className="flex items-center">
               <span className="font-medium w-24">{t.about.email}:</span>
               <a 
                 href={`mailto:${personalInfo.email}`}

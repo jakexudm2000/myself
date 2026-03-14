@@ -10,6 +10,8 @@ export const personalInfo = {
   },
   phone: '+86 13005428811',
   email: 'jakexudm2000@outlook.com',
+  birthday: 'January 4, 2000',
+  birthday_zh: '2000年1月4日',
   github: '',
   slogan: {
     'en': 'Senior Software Engineer specializing in distributed systems, Git kernel, and large-scale platform architecture',
