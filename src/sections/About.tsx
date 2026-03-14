@@ -58,10 +58,6 @@ const About = () => {
                 {personalInfo.email}
               </a>
             </div>
-            <div className="flex items-center">
-              <span className="font-medium w-24">{t.about.phone}:</span>
-              <span className="text-text-secondary-light dark:text-text-secondary-dark">{personalInfo.phone}</span>
-            </div>
           </div>
         </motion.div>
 
