@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { personalInfo } from '../config/personal';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
   const { t } = useLanguage();

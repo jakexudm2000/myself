@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Code, Database, Server } from 'lucide-react';
 import { personalInfo } from '../config/personal';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../context/LanguageContext';
 
 const Skills = () => {
   const { t } = useLanguage();

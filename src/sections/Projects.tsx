@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github as GithubIcon, X } from 'lucide-react';
 import { personalInfo } from '../config/personal';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../context/LanguageContext';
 
 const placeholderProjects = [
   {
