@@ -59,11 +59,23 @@ const Experience = () => {
               <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
                 <div className="card">
                   <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-primary-light dark:text-primary-dark">
-                        {language === 'en' ? exp.company : exp.company_zh}
-                      </h3>
-                      <p className="text-lg font-semibold">{language === 'en' ? exp.position : exp.position_zh}</p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm overflow-hidden">
+                        <img 
+                          src={exp.company === 'Huawei Technologies Co., Ltd.' 
+                            ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Huawei_Logo.svg/2048px-Huawei_Logo.svg.png'
+                            : 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Tencent_Logo.svg/2048px-Tencent_Logo.svg.png'
+                          } 
+                          alt={exp.company} 
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-primary-light dark:text-primary-dark">
+                          {language === 'en' ? exp.company : exp.company_zh}
+                        </h3>
+                        <p className="text-lg font-semibold">{language === 'en' ? exp.position : exp.position_zh}</p>
+                      </div>
                     </div>
                     <div className="flex flex-col items-end">
                       <span className="text-sm font-medium bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark px-3 py-1 rounded-full">
