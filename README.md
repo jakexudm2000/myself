@@ -1,78 +1,109 @@
 # Jake's Personal Website
 
-高级简约风格的个人技术展示网站，用于展示专业能力和项目经验。
+A modern, minimalist personal portfolio website showcasing professional skills and experience. Built for Senior Software Engineer Jake Xu to display technical expertise to potential clients and employers.
 
-## ✨ 特性
-- 🎨 高级简约设计风格
-- 🌓 支持浅色/深色模式切换
-- 📱 完全响应式，适配所有设备
-- ⚡ 极致性能，首屏加载<2秒
-- 🎭 流畅的交互动画效果
-- 🔍 SEO友好
+## ✨ Features
+- 🎨 Clean, premium minimalist design
+- 🌓 Light/dark mode toggle with system preference detection
+- 📱 Fully responsive design (desktop, tablet, mobile)
+- ⚡ Blazing fast performance (<2s first load)
+- 🎭 Smooth animations and transitions powered by Framer Motion
+- 🔍 SEO optimized
+- 📄 All content configurable in a single file
 
-## 🛠️ 技术栈
-- **前端框架**: React 18 + TypeScript
-- **构建工具**: Vite
-- **样式方案**: Tailwind CSS 3
-- **动画库**: Framer Motion
-- **图标库**: Lucide React
-- **部署平台**: Vercel / Netlify
+## 🛠️ Tech Stack
+- **Framework**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS 3
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel / Netlify / GitHub Pages
 
-## 📦 项目结构
+## 📦 Project Structure
 ```
 /
-├── docs/               # 项目文档
-│   └── 需求文档.md      # 详细需求说明
-├── public/             # 静态资源
-│   ├── images/         # 图片资源
-│   └── favicon.ico     # 网站图标
+├── docs/               # Project documentation
+│   ├── requirements.md # Project requirements document
+│   └── personal-info.md # Personal information extracted from resume
+├── public/             # Static assets
+│   ├── images/         # Image resources
+│   └── favicon.ico     # Website favicon
 ├── src/
-│   ├── components/     # 公共组件
-│   ├── sections/       # 页面模块
-│   │   ├── About.tsx   # 个人介绍
-│   │   ├── Experience.tsx # 工作经历
-│   │   ├── Projects.tsx # 项目作品集
-│   │   ├── Skills.tsx  # 技能栈
-│   │   └── Contact.tsx # 联系方式
-│   ├── hooks/          # 自定义Hooks
-│   ├── utils/          # 工具函数
-│   ├── App.tsx         # 主应用组件
-│   ├── main.tsx        # 入口文件
-│   └── index.css       # 全局样式
+│   ├── components/     # Reusable components
+│   │   └── Navbar.tsx  # Navigation bar with theme toggle
+│   ├── sections/       # Page sections
+│   │   ├── About.tsx   # Personal introduction and education
+│   │   ├── Experience.tsx # Work experience timeline
+│   │   ├── Projects.tsx # Project portfolio with modals
+│   │   ├── Skills.tsx  # Skills showcase with progress bars
+│   │   └── Contact.tsx # Contact information with copy functionality
+│   ├── hooks/          # Custom React hooks
+│   │   └── useTheme.ts # Theme management hook
+│   ├── config/         # Configuration files
+│   │   └── personal.ts # All personal content and data
+│   ├── utils/          # Utility functions
+│   ├── App.tsx         # Main application component
+│   ├── main.tsx        # Application entry point
+│   └── index.css       # Global styles and Tailwind imports
 ├── package.json
 ├── tsconfig.json
 ├── vite.config.ts
-└── tailwind.config.js
+├── tailwind.config.js
+└── postcss.config.js
 ```
 
-## 🚀 快速开始
-### 安装依赖
+## 🚀 Getting Started
+### Prerequisites
+- Node.js 16+ and npm/yarn/pnpm
+
+### Installation
 ```bash
 npm install
 ```
 
-### 开发模式
+### Development
 ```bash
 npm run dev
 ```
-访问 http://localhost:5173 查看效果
+Open http://localhost:5173 to view the site in your browser.
 
-### 构建生产版本
+### Build for Production
 ```bash
 npm run build
 ```
 
-### 预览生产版本
+### Preview Production Build
 ```bash
 npm run preview
 ```
 
-## 📝 内容填充
-所有个人内容都在 `src/config/` 目录下配置：
-- `personal.ts` - 个人基本信息
-- `experience.ts` - 工作经历
-- `projects.ts` - 项目信息
-- `skills.ts` - 技能栈配置
+## 📝 Content Customization
+All personal content can be modified in `src/config/personal.ts`:
+- Personal information (name, contact details, location)
+- Education background
+- Work experience and projects
+- Skills and expertise levels
+- Portfolio projects
+- Social media links
+
+No other files need to be modified to update content.
+
+## 🚢 Deployment
+The site is static and can be deployed to any static hosting service:
+
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite project and configure build settings
+3. Deploy with zero configuration
+
+### Netlify
+1. Import the repository to Netlify
+2. Set build command to `npm run build`
+3. Set publish directory to `dist`
+
+### GitHub Pages
+1. Build the project with `npm run build`
+2. Deploy the `dist` directory to GitHub Pages
 
 ## 📄 License
 MIT
