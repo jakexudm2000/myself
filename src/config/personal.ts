@@ -16,7 +16,7 @@ export const personalInfo = {
       degree: 'Bachelor of Science in Computer Science',
       period: '2020.09 - 2021.12',
       location: 'USA',
-      gpa: '4.0/4.0',
+      gpa: '4.0/4.0 (Dean List)',
       description: 'Transferred to complete the final two years of undergraduate studies'
     },
     {

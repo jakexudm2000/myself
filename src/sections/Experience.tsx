@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { personalInfo } from '../config/personal';
+import { useLanguage } from '../hooks/useLanguage';
 
 const Experience = () => {
+  const { t } = useLanguage();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   const toggleExpand = (index: number) => {
@@ -37,7 +39,7 @@ const Experience = () => {
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
-        <h2 className="section-title">Work Experience</h2>
+        <h2 className="section-title">{t.experience.title}</h2>
 
         <div className="relative">
           {/* Timeline line */}
@@ -83,11 +85,11 @@ const Experience = () => {
                   >
                     {expandedIndex === index ? (
                       <>
-                        Hide Projects <ChevronUp size={16} />
+                        {t.experience.hideProjects} <ChevronUp size={16} />
                       </>
                     ) : (
                       <>
-                        Show Projects <ChevronDown size={16} />
+                        {t.experience.showProjects} <ChevronDown size={16} />
                       </>
                     )}
                   </button>

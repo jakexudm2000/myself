@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github as GithubIcon, X } from 'lucide-react';
 import { personalInfo } from '../config/personal';
+import { useLanguage } from '../hooks/useLanguage';
 
-// TODO: Replace with actual projects
 const placeholderProjects = [
   {
     title: 'Git Kernel Optimization',
@@ -40,6 +40,7 @@ const placeholderProjects = [
 ];
 
 const Projects = () => {
+  const { t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const containerVariants = {
@@ -71,7 +72,7 @@ const Projects = () => {
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title">{t.projects.title}</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
@@ -116,7 +117,7 @@ const Projects = () => {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <GithubIcon size={16} />
-                    <span>Code</span>
+                    <span>{t.projects.viewCode}</span>
                   </a>
                 )}
                 {project.demoUrl && (
@@ -128,7 +129,7 @@ const Projects = () => {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink size={16} />
-                    <span>Demo</span>
+                    <span>{t.projects.liveDemo}</span>
                   </a>
                 )}
               </div>
@@ -197,7 +198,7 @@ const Projects = () => {
                         className="btn btn-secondary flex items-center gap-2"
                       >
                         <GithubIcon size={16} />
-                        View Code
+                        {t.projects.viewCode}
                       </a>
                     )}
                     {projects[selectedProject].demoUrl && (
@@ -208,7 +209,7 @@ const Projects = () => {
                         className="btn btn-primary flex items-center gap-2"
                       >
                         <ExternalLink size={16} />
-                        Live Demo
+                        {t.projects.liveDemo}
                       </a>
                     )}
                   </div>

@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { personalInfo } from '../config/personal';
+import { useLanguage } from '../hooks/useLanguage';
 
 const About = () => {
+  const { t } = useLanguage();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,22 +35,22 @@ const About = () => {
       >
         <motion.div variants={itemVariants}>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I'm <span className="text-primary-light dark:text-primary-dark">Jake Xu</span>
+            {t.about.title} <span className="text-primary-light dark:text-primary-dark"></span>
           </h1>
           <p className="text-xl text-text-secondary-light dark:text-text-secondary-dark mb-6">
-            {personalInfo.slogan}
+            {t.about.slogan}
           </p>
-          <p className="text-base md:text-lg mb-8 leading-relaxed">
-            {personalInfo.about}
+          <p className="text-base md:text-lg mb-8 leading-relaxed whitespace-pre-line">
+            {t.about.aboutText}
           </p>
           
           <div className="space-y-3">
             <div className="flex items-center">
-              <span className="font-medium w-24">Location:</span>
+              <span className="font-medium w-24">{t.about.location}:</span>
               <span className="text-text-secondary-light dark:text-text-secondary-dark">{personalInfo.location}</span>
             </div>
             <div className="flex items-center">
-              <span className="font-medium w-24">Email:</span>
+              <span className="font-medium w-24">{t.about.email}:</span>
               <a 
                 href={`mailto:${personalInfo.email}`}
                 className="text-primary-light dark:text-primary-dark hover:underline"
@@ -56,7 +59,7 @@ const About = () => {
               </a>
             </div>
             <div className="flex items-center">
-              <span className="font-medium w-24">Phone:</span>
+              <span className="font-medium w-24">{t.about.phone}:</span>
               <span className="text-text-secondary-light dark:text-text-secondary-dark">{personalInfo.phone}</span>
             </div>
           </div>
@@ -64,14 +67,13 @@ const About = () => {
 
         <motion.div variants={itemVariants}>
           <div className="rounded-xl overflow-hidden shadow-xl">
-            {/* Placeholder for profile image */}
             <div className="aspect-square bg-gradient-to-br from-primary-light/20 to-primary-dark/20 dark:from-primary-light/10 dark:to-primary-dark/10 flex items-center justify-center">
               <span className="text-6xl">👨‍💻</span>
             </div>
           </div>
 
           <div className="mt-8">
-            <h3 className="text-2xl font-bold mb-4">Education</h3>
+            <h3 className="text-2xl font-bold mb-4">{t.about.education}</h3>
             <div className="space-y-4">
               {personalInfo.education.map((edu, index) => (
                 <motion.div

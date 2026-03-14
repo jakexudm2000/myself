@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Mail, Linkedin, Copy, Check } from 'lucide-react';
 import { personalInfo } from '../config/personal';
+import { useLanguage } from '../hooks/useLanguage';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [copied, setCopied] = useState<string | null>(null);
 
   const copyToClipboard = (text: string, type: string) => {
@@ -62,12 +64,11 @@ const Contact = () => {
         className="max-w-3xl mx-auto text-center"
       >
         <motion.h2 variants={itemVariants} className="section-title">
-          Get In Touch
+          {t.contact.title}
         </motion.h2>
         
         <motion.p variants={itemVariants} className="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-12 max-w-xl mx-auto">
-          I'm always open to discussing new projects, opportunities, or just having a chat. 
-          Feel free to reach out through any of the channels below.
+          {t.contact.description}
         </motion.p>
 
         <motion.div variants={itemVariants} className="grid md:grid-cols-3 gap-6">
@@ -99,7 +100,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="btn btn-primary text-sm w-full"
                 >
-                  {method.label === 'Email' ? 'Send Email' : `Visit ${method.label}`}
+                  {method.label === 'Email' ? t.contact.sendEmail : `${t.contact.visit} ${method.label}`}
                 </a>
               </div>
             </div>
@@ -107,7 +108,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.p variants={itemVariants} className="mt-16 text-text-secondary-light dark:text-text-secondary-dark text-sm">
-          © {new Date().getFullYear()} Jake Xu. All rights reserved.
+          © {new Date().getFullYear()} Jake Xu. {t.contact.copyright}
         </motion.p>
       </motion.div>
     </section>
