@@ -145,10 +145,10 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
     programmingLanguages: [
       { name: 'Golang', level: 95 },
       { name: 'Shell', level: 90 },
-      { name: 'C/C++', level: 50 },
       { name: 'Python', level: 75 },
-      { name: 'Java', level: 50 },
-      { name: 'Lua', level: 65 }
+      { name: 'Lua', level: 65 },
+      { name: 'C/C++', level: 50 },
+      { name: 'Java', level: 50 }
     ],
     databases: [
       { name: 'PostgreSQL', level: 85 },
@@ -159,11 +159,11 @@ Previously worked at Huawei and Tencent, leading the design and implementation o
     expertise: [
       { name: 'Git Kernel', level: 95 },
       { name: 'Distributed Systems', level: 90 },
+      { name: 'High Availability Architecture', level: 90 },
       { name: 'gRPC', level: 85 },
       { name: 'HTTPS', level: 85 },
       { name: 'NFS v3', level: 80 },
-      { name: 'S3', level: 75 },
-      { name: 'High Availability Architecture', level: 90 }
+      { name: 'S3', level: 75 }
     ]
   },
   projects: [
