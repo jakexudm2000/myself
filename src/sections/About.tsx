@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { personalInfo } from '../config/personal';
+import { personalInfo, getLocalizedField } from '../config/personal';
 import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,19 +35,19 @@ const About = () => {
       >
         <motion.div variants={itemVariants}>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            {t.about.title} <span className="text-primary-light dark:text-primary-dark"></span>
+            {language === 'en' ? "Hi, I'm Jake Xu" : '你好，我是徐德明'} <span className="text-primary-light dark:text-primary-dark"></span>
           </h1>
           <p className="text-xl text-text-secondary-light dark:text-text-secondary-dark mb-6">
-            {t.about.slogan}
+            {getLocalizedField(personalInfo.slogan, language)}
           </p>
           <p className="text-base md:text-lg mb-8 leading-relaxed whitespace-pre-line">
-            {t.about.aboutText}
+            {getLocalizedField(personalInfo.about, language)}
           </p>
           
           <div className="space-y-3">
             <div className="flex items-center">
               <span className="font-medium w-24">{t.about.location}:</span>
-              <span className="text-text-secondary-light dark:text-text-secondary-dark">{personalInfo.location}</span>
+              <span className="text-text-secondary-light dark:text-text-secondary-dark">{getLocalizedField(personalInfo.location, language)}</span>
             </div>
             <div className="flex items-center">
               <span className="font-medium w-24">{t.about.email}:</span>
@@ -86,14 +86,14 @@ const About = () => {
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h4 className="font-bold">{edu.school}</h4>
-                      {edu.degree && <p className="text-text-secondary-light dark:text-text-secondary-dark">{edu.degree}</p>}
+                      <h4 className="font-bold">{language === 'en' ? edu.school : edu.school_zh}</h4>
+                      {edu.degree && <p className="text-text-secondary-light dark:text-text-secondary-dark">{language === 'en' ? edu.degree : edu.degree_zh}</p>}
                     </div>
                     <span className="text-sm text-primary-light dark:text-primary-dark font-medium">{edu.period}</span>
                   </div>
                   <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-1">{edu.location}</p>
                   <p className="text-sm font-medium">GPA: {edu.gpa}</p>
-                  <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">{edu.description}</p>
+                  <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">{getLocalizedField(edu.description, language)}</p>
                 </motion.div>
               ))}
             </div>

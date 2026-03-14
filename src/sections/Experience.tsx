@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { personalInfo } from '../config/personal';
+import { personalInfo, getLocalizedField } from '../config/personal';
 import { useLanguage } from '../context/LanguageContext';
 
 const Experience = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   const toggleExpand = (index: number) => {
@@ -61,22 +61,22 @@ const Experience = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-primary-light dark:text-primary-dark">
-                        {exp.company}
+                        {language === 'en' ? exp.company : exp.company_zh}
                       </h3>
-                      <p className="text-lg font-semibold">{exp.position}</p>
+                      <p className="text-lg font-semibold">{language === 'en' ? exp.position : exp.position_zh}</p>
                     </div>
                     <div className="flex flex-col items-end">
                       <span className="text-sm font-medium bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark px-3 py-1 rounded-full">
                         {exp.period}
                       </span>
                       <span className="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">
-                        {exp.location}
+                        {language === 'en' ? exp.location : exp.location_zh}
                       </span>
                     </div>
                   </div>
 
                   <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4">
-                    {exp.description}
+                    {getLocalizedField(exp.description, language)}
                   </p>
 
                   <button
@@ -108,9 +108,11 @@ const Experience = () => {
                             key={projectIndex}
                             className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg"
                           >
-                            <h4 className="font-semibold mb-2">{project.title}</h4>
+                            <h4 className="font-semibold mb-2">
+                              {language === 'en' ? project.title : project.title_zh}
+                            </h4>
                             <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-3">
-                              {project.description}
+                              {getLocalizedField(project.description, language)}
                             </p>
                             <div className="flex flex-wrap gap-2">
                               {project.technologies.map((tech, techIndex) => (
